@@ -9,8 +9,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 @Configuration
 public class SwaggerConf {
-    @Bean
-    public Docket api() {
+    @Bean    public Docket api() {
         return new Docket(DocumentationType.OAS_30)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.prueba.prueba.web"))
