@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/herlin")
 public class HerlinControlador {
     private HerlinService herlinService = new HerlinService();
+
+    /**
+     * RETORNA NOMBRE
+     * @param nombre
+     * @return
+     */
     @GetMapping("/{nombre}")
     public String obtenerPorId(@PathVariable String nombre){
         return herlinService.servicioHerlin(nombre);
