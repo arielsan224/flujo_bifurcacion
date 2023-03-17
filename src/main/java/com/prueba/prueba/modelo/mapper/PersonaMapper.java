@@ -1,25 +1,23 @@
 package com.prueba.prueba.modelo.mapper;
 
-import com.prueba.prueba.modelo.Persona;
-import com.prueba.prueba.repo.dao.PersonaDao;
-import lombok.Data;
+import com.prueba.prueba.modelo.PersonaDos;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class PersonaMapper implements RowMapper<Persona> {
+public class PersonaMapper implements RowMapper<PersonaDos> {
 
     @Override
-    public Persona mapRow (ResultSet rs, int nowNum) throws SQLException {
+    public PersonaDos mapRow (ResultSet rs, int nowNum) throws SQLException {
 
-        Persona persona = new Persona();
-        persona.setId(rs.getInt("ID"));
-        persona.setPrimernombre(rs.getString(  "PRIMER_NOMBRE"));
-        persona.setSegundonombre(rs.getString( "SEGUNDO_NOMBRE"));
-        persona.setPrimerapellido(rs.getString("PRIMER_APELLIDO"));
-        persona.setSegundoapellido(rs.getString("SEGUNDO_APELLIDO"));
-        return persona;
+        PersonaDos personaDos = new PersonaDos();
+        personaDos.setId(rs.getInt("ID"));
+        personaDos.setPrimernombre(rs.getString(  "PRIMER_NOMBRE"));
+        personaDos.setSegundonombre(rs.getString( "SEGUNDO_NOMBRE"));
+        personaDos.setPrimerapellido(rs.getString("PRIMER_APELLIDO"));
+        personaDos.setSegundoapellido(rs.getString("SEGUNDO_APELLIDO"));
+        return personaDos;
     }
 
 

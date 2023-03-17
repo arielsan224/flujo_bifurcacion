@@ -1,7 +1,7 @@
 package com.prueba.prueba.web;
 
 
-import com.prueba.prueba.modelo.Persona;
+import com.prueba.prueba.modelo.PersonaDos;
 import com.prueba.prueba.servicio.PersonaServicio;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -27,17 +27,17 @@ public class PersonaControlador {
 
     @GetMapping("/todo")
     @ApiOperation("Obtiene Todos los registros de Personas")
-    public List<Persona> obtenerTodo(){
+    public List<PersonaDos> obtenerTodo(){
         return personaServicio.obtenerTodo();
     }
 
     @PostMapping("/guardar")
-    public void guardar (@RequestBody Persona persona){
-        personaServicio.guardar(persona);
+    public void guardar (@RequestBody PersonaDos personaDos){
+        personaServicio.guardar(personaDos);
     }
 
     @GetMapping("/{id}")
-    public Optional<Persona> obtenerPorId(@PathVariable int id){
+    public Optional<PersonaDos> obtenerPorId(@PathVariable int id){
         return personaServicio.obtenerPorId(id);
     }
     @DeleteMapping("/{id}")
