@@ -31,8 +31,9 @@ public class PersonaDaoImpl implements PersonaDao {
                 "([PRIMER_NOMBRE]," +
                 "[SEGUNDO_NOMBRE]," +
                 "[PRIMER_APELLIDO]," +
-                "[SEGUNDO_APELLIDO] )" +
-                "VALUES (?,?,?,?)", persona.getPrimernombre(), persona.getSegundonombre(), persona.getPrimerapellido(), persona.getSegundoapellido()
+                "[SEGUNDO_APELLIDO]," +
+                "[IDENTIFICACION] )" +
+                "VALUES (?,?,?,?,?)", persona.getPrimernombre(), persona.getSegundonombre(), persona.getPrimerapellido(), persona.getSegundoapellido(), persona.getIdentificacion()
         );
 
     }

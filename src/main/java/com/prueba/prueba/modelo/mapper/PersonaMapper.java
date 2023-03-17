@@ -19,6 +19,7 @@ public class PersonaMapper implements RowMapper<Persona> {
         persona.setSegundonombre(rs.getString( "SEGUNDO_NOMBRE"));
         persona.setPrimerapellido(rs.getString("PRIMER_APELLIDO"));
         persona.setSegundoapellido(rs.getString("SEGUNDO_APELLIDO"));
+        persona.setIdentificacion(rs.getString("IDENTIFICACION"));
         return persona;
     }
 

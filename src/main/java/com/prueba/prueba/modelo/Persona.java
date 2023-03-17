@@ -20,4 +20,6 @@ public class Persona {
     private  String primerapellido;
     @Column (name="SEGUNDO_APELLIDO")
     private  String segundoapellido;
+    @Column (name="IDENTIFICACION")
+    private String identificacion;
 }
